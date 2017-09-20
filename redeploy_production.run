@@ -13,3 +13,4 @@ pm2 restart ryukyu_projects_service_prod
 pm2 restart ryukyu_tasks_service_prod
 pm2 restart ryukyu_user_profile_service_prod
 pm2 restart ryukyu_files_service_prod
+pm2 restart ryukyu_code_checker_service_prod
