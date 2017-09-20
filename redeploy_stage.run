@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Have to run locally form within directory for safest operation (relative paths in app.js)
+
+cd ryukyu_social_backend_stage
+git pull origin master
+
+#Start development versions
+pm2 restart ryukyu_users_service_dev
+pm2 restart ryukyu_user_photos_service_dev
+pm2 restart ryukyu_project_photos_service_dev
+pm2 restart ryukyu_projects_service_dev
+pm2 restart ryukyu_tasks_service_dev
+pm2 restart ryukyu_user_profile_service_dev
+pm2 restart ryukyu_files_service_dev
+pm2 restart ryukyu_code_checker_service_dev

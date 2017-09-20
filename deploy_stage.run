@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#Have to run locally form within directory for safest operation (relative paths in app.js)
+
+#Start development versions
+export NODE_ENV=development
+
+cd ryukyu_social_backend_stage/user_management
+pm2 start app.js --name ryukyu_users_service_dev --env development
+
+cd ../../ryukyu_social_backend_stage/user_photos
+pm2 start app.js --name ryukyu_user_photos_service_dev --env development
+
+cd ../../ryukyu_social_backend_stage/project_photos
+pm2 start app.js --name ryukyu_project_photos_service_dev --env development
+
+cd ../../ryukyu_social_backend_stage/projects
+pm2 start app.js --name ryukyu_projects_service_dev --env development
+
+cd ../../ryukyu_social_backend_stage/tasks
+pm2 start app.js --name ryukyu_tasks_service_dev --env development
+
+cd ../../ryukyu_social_backend_stage/user_profile
+pm2 start app.js --name ryukyu_user_profile_service_dev --env development
+
+cd ../../ryukyu_social_backend_stage/files
+pm2 start app.js --name ryukyu_files_service_dev --env development
+
+cd ../../ryukyu_social_backend_stage/code_checker
+pm2 start app.js --name ryukyu_code_checker_service_dev --env development
+
+
+#pm2 start ryukyu_social_backend_stage/task_puller_chatwork/app.rb --name ryukyu_task_puller_chatwork --interpreter ruby
+#pm2 start ryukyu_social_backend_stage/task_puller_slack/app.rb --name ryukyu_task_puller_slack --interpreter ruby
+
+
